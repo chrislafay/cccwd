@@ -1,0 +1,91 @@
+/* mixins.scss */
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+@mixin breakpoint($point) {
+   @if $point == tiny {
+    @media (max-width: 320px) { @content; }
+  }
+  @if $point == iphone {
+    @media (max-width: 375px) { @content; }
+  }
+  @if $point == plus {
+    @media (max-width: 414px) { @content; }
+  }
+  @if $point == small {
+    @media (max-width: 600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 900px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $point == between {
+    @media (max-width: 1280px) { @content; }
+  }
+  @else if $point == macbook {
+     @media (max-width: 1440px) { @content; } 
+  }
+  @else if $point == large {
+    @media (max-width: 1680px)  { @content; }
+  }
+  @else if $point == xxlarge {
+    @media (max-width: 2400px)  { @content; }
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// border radius
+
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+
+// breakpoints for animated headlines
+
+$S:     480px;
+$M:     768px;
+$L:     1170px;
+
+// media queries for animated headlines
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+}
