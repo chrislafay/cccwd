@@ -1,15 +1,8 @@
+<?php /* Template Name: Homepage */ ?>
 <!DOCTYPE html>
-
 <html>
-
-
     <body class="full-body-tan">
-        <?php
-    /**
-     * Template Name: wd-front-page
-     */
-    get_header();
-    ?>
+        <?php get_header(); ?>
         <div class="w-section header-section">
             <div id="top" data-collapse="small" data-animation="default" data-duration="300" data-easing2="ease-out-cubic" data-easing="ease-in-quad" class="w-nav navbar">
                 <div class="white-pane sign-up-pane">
