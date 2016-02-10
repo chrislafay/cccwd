@@ -1,0 +1,28 @@
+$primary: #004b91;
+$primary-light-1: lighten($primary,5%);
+$primary-light-2: lighten($primary,10%);
+$primary-light-3: lighten($primary,15%);
+$primary-light-4: lighten($primary,20%);
+$primary-dark-1: darken($primary,5%);
+$primary-dark-2: darken($primary,10%);
+$primary-dark-3: darken($primary,15%);
+$primary-dark-4: darken($primary,20%);
+
+$primary-text: #FFF;
+
+
+$secondary: #fbb021;
+$secondary-light-1: lighten($secondary,5%);
+$secondary-light-2: lighten($secondary,10%);
+$secondary-light-3: lighten($secondary,15%);
+$secondary-light-4: lighten($secondary,20%);
+$secondary-dark-1: darken($secondary,5%);
+$secondary-dark-2: darken($secondary,10%);
+$secondary-dark-3: darken($secondary,15%);
+$secondary-dark-4: darken($secondary,20%);
+
+$secondary-text: #FFF;
+
+
+$radius: 5px;
+$radius-large: 25px;

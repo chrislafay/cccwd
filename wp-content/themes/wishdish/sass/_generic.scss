@@ -1,0 +1,9 @@
+.rounded { border-radius: $radius; }
+.rounded-large { border-radius: $radius-large; }
+.caps { text-transform: uppercase; }
+
+.color-primary { color:$primary !important; }
+.color-secondary { color:$secondary !important; }
+
+.bgcolor-primary { background-color:$primary !important; }
+.bgcolor-secondary { background-color:$secondary !important; }

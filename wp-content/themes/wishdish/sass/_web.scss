@@ -1,0 +1,39 @@
+// Header
+.header {
+
+
+	.header-spacer {
+		background-color: $primary;
+		height: 34px;
+		width:100%;
+	}
+	.header-content {
+		padding:15px;
+	}
+	.header-banner {
+		background-size: cover;
+		background-position: center center;
+
+		.header-banner-overlay {
+			background-image:url(../images/v-white.png);
+			background-position: right;
+			background-size:auto 120%;
+			background-repeat: no-repeat;
+			color:#FFF;
+			padding: 60px 0;
+
+			h1 {
+				font-size: 3.5em;
+				font-weight: bold;
+				margin: 0;
+				padding: 0;
+				text-transform: uppercase;
+			}
+			h3 {
+				font-weight: 100;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}
