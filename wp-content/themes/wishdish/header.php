@@ -1,14 +1,4 @@
-<?php
-/**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
     <head>
 
@@ -35,7 +25,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/wishdish/images/fav2.jpg">
         <link rel="apple-touch-icon" href="/wp-content/themes/wishdish/images/fav1.jpg">
 
-        
+
 
 
 
@@ -81,7 +71,7 @@
                         <div class="w-nav-button mobile-menu">
                             <div class="w-icon-nav-menu"></div>
                         </div>
-                        <a href="http://wishdish.webflow.io/authors/christopher" class="w-hidden-medium w-hidden-small w-hidden-tiny w-button sleek-button account loggedin">&nbsp;</a>
+                        <a href="/edit-my-profile/" class="w-hidden-medium w-hidden-small w-hidden-tiny w-button sleek-button account loggedin">&nbsp;</a>
                         <a data-ix="sign-in-appear" class="w-hidden-main w-hidden-small w-hidden-tiny w-button sleek-button align-sleek sign-up-button loggedout">Sign In</a>
                         <a data-ix="sign-in-appear" class="w-hidden-medium w-hidden-small w-hidden-tiny w-button sleek-button align-sleek sign-up-button loggedout">Sign In / Sign Up</a>
                         <a href="share.html" class="w-hidden-small w-hidden-tiny w-button sleek-button align-sleek">Share a story</a>
@@ -112,3 +102,24 @@
         </header><!-- .site-header -->
 
 
+        <div data-ix="tags-menu-origin" class="w-hidden-small w-hidden-tiny tags-drop">
+            <div class="drop-div">
+                <h1 class="drop-header">Explore Tags</h1>
+                <a href="tags.html" class="see-all-tags">See all Tags</a>
+                <div class="w-clearfix facebook-div">
+                    <img width="60" src="/wp-content/themes/wishdish/images/567ef0471a7aef7170724cb6_WD.jpg" class="wish-dish-icon">
+                    <div class="w-embed facebook-like">
+                        <div class="fb-like" data-href="https://www.facebook.com/thewishdish" data-width="500" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-dyn-list communities-list">
+                <div class="w-dyn-items w-row w-clearfix">
+                    <?php foreach(get_categories() as $cat) { ?>
+                      <div class="w-dyn-item w-col w-col-3 tags-link">
+                          <a href="category/<?=$cat->slug?>" class="tags-link"><?=$cat->name?></a>
+                      </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>

@@ -1,4 +1,4 @@
-<?php /* Template Name: Tag Page 2 */ ?>
+<?php /* Template Name: Category List */ ?>
 <!DOCTYPE html>
 <html>
     <body class="full-body-tan">
@@ -63,18 +63,21 @@
                     </div>
                     <div class="w-dyn-list">
                         <div class="w-dyn-items w-row">
-                            <div class="w-dyn-item w-col w-col-3">
-                                <a class="w-inline-block tag-block">
-                                    <div data-ix="category-thumbnail" class="thumbnail">
-                                        <div class="tag"></div>
-                                        <div class="dark-overlay"></div>
-                                    </div>
-                                </a>
-                            </div>
+                            <?php foreach(get_categories() as $cat) { ?>
+                              <?php $cat_meta = get_category_meta(NULL,$cat->term_id); ?>
+                              <div class="w-dyn-item w-col w-col-3">
+                                  <a href="/category/<?=$cat->slug?>" class="w-inline-block tag-block">
+                                      <div data-ix="category-thumbnail" class="thumbnail" <?php if( isset($cat_meta['cat_bg_image']) && !is_null($cat_meta['cat_bg_image']) ) { ?> style="background-image:url(<?=$cat_meta['cat_bg_image']?>);" <?php } ?>>
+                                          <div class="tag"><?=$cat->name?></div>
+                                          <div class="dark-overlay"></div>
+                                      </div>
+                                  </a>
+                              </div>
+                            <?php } ?>
                         </div>
-                        <div class="w-dyn-empty empty-state">
+                        <!--<div class="w-dyn-empty empty-state">
                             <p class="empty-state-text">No tags (<em data-new-link="true">yet!</em>)</p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

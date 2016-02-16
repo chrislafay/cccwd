@@ -80,6 +80,10 @@ img {
   margin-bottom: 10px;
 }
 
+.clear {
+  clear: both;
+}
+
 .navbar {
   position: relative;
   z-index: 20;
@@ -2103,6 +2107,9 @@ img {
   width: auto;
   float: left;
 }
+.tag-div-container {
+  width:100%;
+}
 
 .tag-div.compose {
   width: 100%;
@@ -2302,7 +2309,7 @@ img {
 
 .form-2 {
   display: block;
-  width: 403px;
+  width: 433px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 13px;
@@ -3347,4 +3354,3 @@ html.w-mod-js *[data-ix="success-visibility-none"] {
     width: auto;
   }
 }
-
