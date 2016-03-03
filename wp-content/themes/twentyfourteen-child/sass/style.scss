@@ -1,0 +1,72 @@
+/*
+Theme Name: Twenty Fourteen Child
+Theme URI: http://example.com/twenty-fourteen-child/
+Description: Twenty Fourteen Child Theme
+Author: John Doe
+Author URI: http://example.com
+Template: twentyfourteen
+Version: 1.0.0
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: twenty-fourteen-child
+*/
+
+@import "compass";
+@import "compass/reset";
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+@import "_partials/grid";
+@import "_partials/hero";
+@import "_partials/button";
+@import "_partials/homepage";
+@import "_partials/blog";
+@import "_partials/404";
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+body {
+    -webkit-outline:none;
+    outline:none;
+    font-weight: 400;
+
+    a, a:active, a:focus {
+        outline: none;
+    }
+
+}
+strong{
+    font-weight: 600;
+}
+.page {
+    position: relative;
+}
+.home {
+    .current_page_item {
+        display:  none;
+    }
+}
+blockquote{
+    color: $staffing;
+
+    p{
+        strong{
+            em{
+                font-weight: 500; 
+                font-style: italic;
+            }
+        }
+
+    }
+}
+
+a{
+    color: red;
+}
