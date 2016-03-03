@@ -1,0 +1,18 @@
+.button {
+	text-decoration: none;
+
+	&.primary {
+		background-color: $primary;
+		color:$primary-text;
+	}
+	&.secondary {
+		background-color: $secondary;
+		color:$secondary-text;
+	}
+
+	&.block { display: block; }
+
+	&.large {
+		padding:15px 20px;
+	}
+}
